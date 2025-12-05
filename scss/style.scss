@@ -1,0 +1,197 @@
+@use "normalize";
+@use "variables" as var;
+@use "global.scss";
+@use "media-queries" as q;
+@use "sass:color";
+
+.header {
+  position: sticky;
+  background-color: var.$color-bg-light;
+  top: 0;
+  z-index: 200;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    position: relative;
+  }
+
+  &__logo {
+    font-family: var.$font-logo;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: 800;
+    color: var.$color-heading;
+    padding-left: 1rem;
+  }
+}
+
+.game-board {
+  display: block;
+  gap: 1.5rem;
+  div {
+    background: var.$color-bg-light;
+    border: 3px dashed var.$color-dark;
+    border-radius: 10px;
+    padding: 3rem;
+  }
+}
+
+.game-stats {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__item {
+    background: var.$color-bg-light;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 110px;
+    padding: 0.5rem !important;
+    border: 1px solid var.$color-dark !important;
+  }
+
+  &__label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
+  }
+}
+
+.hangman-stage {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard {
+  background: var.$color-bg-light;
+  border: 3px dashed var.$color-dark;
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  &__key {
+    background: var.$color-bg-light;
+    border: 2px solid var.$color-dark;
+    box-shadow: 3px 3px 0 var.$color-dark;
+    border-radius: 5px;
+    color: var.$color-dark;
+    padding: 1.2rem 1.2rem;
+    margin: 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  &__key:disabled {
+    background: color.scale(var.$color-bg-light, $lightness: 10%);
+    border-color: var.$color-dark;
+    opacity: 0.2;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  &__special-keys {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__reset {
+    padding: 1.2rem 6rem;
+  }
+}
+
+.footer {
+  background-color: var.$color-bg-light;
+  padding: 3rem 2rem;
+  border-radius: 30px 30px 0 0;
+  text-align: center;
+  color: var.$color-heading;
+  margin-top: 4rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__email {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+
+  &__email-link {
+    color: var.$color-heading;
+    text-decoration: underline;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__social-link {
+    color: var.$color-heading;
+    text-decoration: none;
+    font-family: var.$font-heading;
+    font-style: italic;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+  }
+
+  &__social-link:hover {
+    opacity: 0.7;
+  }
+
+  &__copyright {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+@include q.laptop {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .game-board {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .game-status {
+    flex: 1;
+  }
+
+  .hangman-stage {
+    flex: 1;
+    margin-top: 0;
+  }
+}

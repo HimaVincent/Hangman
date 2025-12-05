@@ -1,0 +1,403 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the line height in all browsers.
+3. Prevent adjustments of font size after orientation changes in iOS.
+4. Use a more readable tab size (opinionated).
+*/
+html {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* 1 */
+  line-height: 1.15; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+  tab-size: 4; /* 4 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: linear-gradient(#88d1f3 1px, transparent 1px), linear-gradient(90deg, #88d1f3 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-color: #f7f2e6;
+  color: #a68a5c;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", serif;
+  color: #8b6f47;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0 0.7rem;
+}
+
+.main,
+.main__section {
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+.header {
+  position: sticky;
+  background-color: #fffefe;
+  top: 0;
+  z-index: 200;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  position: relative;
+}
+.header__logo {
+  font-family: "Meddon", cursive;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 800;
+  color: #8b6f47;
+  padding-left: 1rem;
+}
+
+.game-board {
+  display: block;
+  gap: 1.5rem;
+}
+.game-board div {
+  background: #fffefe;
+  border: 3px dashed #37353e;
+  border-radius: 10px;
+  padding: 3rem;
+}
+
+.game-stats {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+.game-stats__item {
+  background: #fffefe;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+  padding: 0.5rem !important;
+  border: 1px solid #37353e !important;
+}
+.game-stats__label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.game-stats__value {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+.hangman-stage {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard {
+  background: #fffefe;
+  border: 3px dashed #37353e;
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.keyboard__key {
+  background: #fffefe;
+  border: 2px solid #37353e;
+  box-shadow: 3px 3px 0 #37353e;
+  border-radius: 5px;
+  color: #37353e;
+  padding: 1.2rem 1.2rem;
+  margin: 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.keyboard__key:disabled {
+  background: rgb(255, 254.1, 254.1);
+  border-color: #37353e;
+  opacity: 0.2;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.keyboard__special-keys {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.keyboard__reset {
+  padding: 1.2rem 6rem;
+}
+
+.footer {
+  background-color: #fffefe;
+  padding: 3rem 2rem;
+  border-radius: 30px 30px 0 0;
+  text-align: center;
+  color: #8b6f47;
+  margin-top: 4rem;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer__email {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.footer__email-link {
+  color: #8b6f47;
+  text-decoration: underline;
+}
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.footer__social-link {
+  color: #8b6f47;
+  text-decoration: none;
+  font-family: "DM Serif Display", serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+.footer__social-link:hover {
+  opacity: 0.7;
+}
+.footer__copyright {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.is-hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .game-board {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .game-status {
+    flex: 1;
+  }
+  .hangman-stage {
+    flex: 1;
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
